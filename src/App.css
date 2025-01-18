@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  color: white;
+  background: linear-gradient(200deg, #10175b, #121554, #13134c, #141145, #140f3f, 
+  #140c38, #140931, #13052b);
+}
+
+.navbar {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 4px 6px 7px rgba(17, 3, 21, 0.168);
+  margin-bottom: 1rem;
+  height: 6rem;
+}
+
+.logo {
+  padding: 1rem;
+  padding: 1rem 2rem;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.logo a{
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 530;
+  width: 100%;
+}
+
+.routes {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.routes li {
+  margin: 0 2rem;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.7rem;
+}
+
+.routes li a {
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+.routes li:hover{
+  background-color: rgb(198, 198, 198);
+}
+
+.menu {
+  height: 90%;
+  width: 2.5rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  display: none;
+}
+
+.menu div {
+  height: 0.4rem;
+  width: 100%;
+  background-color: black;
+  margin: 0.3rem 0;
+  border-radius: 0.4rem;
+}
+
+@media screen and (max-width:590px) {
+  .routes {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 1.5rem;
+    width: 50%;
+    transform: translateY(14rem);
+    border-radius: 1rem;
+    z-index: 1;
+    background-color: #16082f;
+    border: 1px solid grey;
+  }
+  .routes li {
+    margin: 1.5rem 0;
+  }
+
+  .routes.active{
+    display: block;
+    animation: showSideBar 0.3s ease-in-out forwards;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+@keyframes showSideBar {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(2rem);
+  width: 95vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: -1;
+}
+
+@media screen and (max-width: 750px){
+  .container{
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+}
+
+.homeimage {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.homeimage img {
+  min-width: 30rem;
+  border-top-left-radius: 30rem;
+  border-bottom-left-radius: 30rem;
+}
+
+.hometext {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text p{
+  color: white;
+  font-style: italic;
+  font-size: 3.5rem;
+  padding: 1rem;
+}
+
+.ballimg {
+  margin-top: 1rem;
+  overflow: hidden;
+  flex-grow: 1;
+  height: 100%;
+} 
+
+.ballimg img {
+  height: 21rem;
+  flex-grow: 1;
+  filter: drop-shadow(1px 1px 12px rgb(231, 227, 227));
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #c5bfd992;
+  border-radius: 1rem;
+  margin: 2rem;
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #2c1414;
+}
+
+.about h3 {
+  font-size: 1.8rem;
+  color: #2c1414;
+}
+
+.about ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.about ul li {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.about p {
+  font-size: 1.3rem;
+  color: #2c1414;
+  margin: 1rem;
+}
+
+button {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 5rem;
+  width: 20rem;
+  background: rgb(245, 222, 179);
+  border-radius: 4rem;
+  margin: 0.5rem 0.8rem;
+  padding: 0rem 0.5rem;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 3px black;
+  box-shadow: 3px 3px 3px rgb(255, 255, 255) inset;
+}
+
+button:hover {
+  background-color: #e1b75b;
+  transform: scale(1.07);
+}
+
+.topBtns, .bottomBtns{
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.topBtns{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.bottomBtns{
+  position: absolute;
+  bottom: 0;
+}
+
+.spinner{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 10px solid #c0c2c0;
+  border-top-color: #211f20; 
+  border-bottom-color: #211f20; 
+  animation: spin 1s ease infinite;
+  margin-left: 1rem;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.cardspage {
+  height: 90vh;
+  width: 94%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  z-index: -1;
+}
+
+.pokeFetcher {
+  width: 94%;
+  height: 88vh;
+  background-color: rgba(255, 255, 255, 0.051);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 3px 3px 5px rgb(255, 255, 255), 3px 3px 4px rgb(255, 255, 255) inset;
+  padding: 0.5rem;
+}
+
+.cardsContainter {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.cardsContainter div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemonCard {
+  margin: 2rem 0.5rem;
+  border-radius: 1rem;
+  flex-grow: 1;
+  animation: fadeIn 0.5s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cardContain {
+  height: 50rem;
+  width: 30rem;
+}
+
+.card {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 50rem;
+  width: 30rem;
+  background-color: rgb(13, 7, 30);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card p {
+  font-size: 2.5rem;
+  font-style: oblique;
+  color: #ffffffeb;
+  text-decoration: underline;
+  text-shadow: 2px 2px 3px rgb(220, 110, 226);
+  font-weight: 700;
+  text-indent: 0.8rem;
+  text-transform: uppercase;
+}
+
+.bground {
+  position: absolute;
+  border-radius: 1.5rem;
+  height: 51rem;
+  width: 31rem;
+  background: linear-gradient(157deg, rgb(210, 223, 38) 10%, rgb(5, 138, 247) 80%);
+}
+
+.image {
+  width: 100%;
+}
+
+.image img {
+  width: 95%;
+  background-color: rgb(217, 214, 214);
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border:5px solid silver;
+  box-shadow: 3px 3px 3px rgb(255, 255, 255) inset, 3px 3px 2px rgb(217, 230, 47);
+}
+
+.image img, p {
+  margin: 0 3.5rem;
+}
+
+.stats {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.stats div{
+  font-size: 1.8rem;
+  flex-grow: 1;
+  margin: 0 2.5rem;
+  text-transform: uppercase;
+  font-weight: 520;
+  color: #d1cfc1f3;
+  text-shadow: 2px 2px 4px #e0c336;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f8dba5;
+  border-radius: 10px;    
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f6a24eea;
+}
+
+@media screen and (max-width:720px) {
+  html{
+    font-size: 59%;
+  }
+}
+
+@media screen and (max-width:675px) {
+  .pokeFetcher{
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width:500px) {
+  html{
+    font-size: 58%;
+  }
+  .pokeFetcher{
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  html{
+    font-size: 57%;
+  }
+  .pokeFetcher{
+    width: 33rem;
+  }
+}
