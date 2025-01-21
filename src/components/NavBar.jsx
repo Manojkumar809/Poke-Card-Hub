@@ -6,10 +6,7 @@ const NavBar = () => {
   const toggleMenu = ()=>{
     const menu = document.getElementsByClassName("routes")[0];
     if(menu){
-      menu.classList.toggle("active");
-      console.log("adding active")
-    }else{
-      console.log("getting page..")
+      menu.classList.toggle("active")
     }
   }
   return (
